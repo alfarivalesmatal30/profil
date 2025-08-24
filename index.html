@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Alfa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Terapkan font Inter ke seluruh elemen body dan pastikan tidak ada margin/padding default */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0d0c1d; /* Warna latar belakang sangat gelap */
+        }
+        
+        /* Tambahkan gradien pada teks judul */
+        .text-gradient {
+            background-image: linear-gradient(90deg, #f97316, #3b82f6, #6b7280); /* Oranye, Biru, Abu-abu */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Gradien untuk border profil picture */
+        .profile-border-gradient {
+            background-image: linear-gradient(to bottom right, #f97316, #3b82f6);
+            padding: 4px; /* Lebar border */
+        }
+
+        /* Gradien untuk tombol */
+        .button-gradient {
+            background-image: linear-gradient(to right, #f97316, #3b82f6);
+        }
+
+        /* Animasi untuk card agar muncul dengan efek fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-animate {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div id="app-root">
+        <div class="card-animate p-8 rounded-3xl shadow-2xl w-full max-w-sm text-center transform transition-all duration-500 hover:scale-[1.02] border border-gray-700 bg-gray-800">
+            
+            <!-- Foto Profil -->
+            <!-- Tambahkan div pembungkus untuk border gradien -->
+            <div class="inline-block rounded-full profile-border-gradient mb-4">
+                <img
+                    src="https://placehold.co/128x128/f97316/ffffff?text=Alfa"
+                    alt="Foto Profil Alfa"
+                    class="rounded-full w-32 h-32 object-cover border-4 border-gray-800"
+                />
+            </div>
+
+            <!-- Nama dan Pendidikan -->
+            <h1 class="text-3xl font-extrabold text-gradient mb-1">
+                Alfa Rivales Matal
+            </h1>
+            <!-- Detail Fakultas dan Jurusan -->
+            <p class="text-sm font-medium text-gray-300">
+                Mahasiswa Teknik Informatika
+            </p>
+            <p class="text-sm font-medium text-gray-400 mb-4">
+                Fakultas Teknik, Universitas Palangkaraya
+            </p>
+
+            <!-- Bio baru -->
+            <p class="text-sm text-gray-400 mb-6">
+                Konten kreator digital, produser musik & DJ.
+            </p>
+
+            <!-- Tautan Media Sosial -->
+            <div class="flex flex-col space-y-4">
+                <!-- Tombol Instagram dengan gradien -->
+                <a
+                    href="https://www.instagram.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 button-gradient"
+                >
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </a>
+                <!-- Tombol YouTube dengan gradien terbalik untuk variasi -->
+                <a
+                    href="https://www.youtube.com/Alfa Rivales Matal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-red-600 to-red-800"
+                >
+                    <i class="fab fa-youtube mr-2"></i> YouTube
+                </a>
+                <!-- Tombol Facebook dengan warna biru khasnya -->
+                <a
+                    href="https://www.facebook.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-blue-600 hover:bg-blue-700"
+                >
+                    <i class="fab fa-facebook-f mr-2"></i> Facebook
+                </a>
+                <!-- Tombol WhatsApp dengan warna hijau khasnya -->
+                <a
+                    href="https://wa.me/6281234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-green-500 hover:bg-green-600"
+                >
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Alfa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Terapkan font Inter ke seluruh elemen body dan pastikan tidak ada margin/padding default */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0d0c1d; /* Warna latar belakang sangat gelap */
+        }
+        
+        /* Tambahkan gradien pada teks judul */
+        .text-gradient {
+            background-image: linear-gradient(90deg, #f97316, #3b82f6, #6b7280); /* Oranye, Biru, Abu-abu */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Gradien untuk border profil picture */
+        .profile-border-gradient {
+            background-image: linear-gradient(to bottom right, #f97316, #3b82f6);
+            padding: 4px; /* Lebar border */
+        }
+
+        /* Gradien untuk tombol */
+        .button-gradient {
+            background-image: linear-gradient(to right, #f97316, #3b82f6);
+        }
+
+        /* Animasi untuk card agar muncul dengan efek fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-animate {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div id="app-root">
+        <div class="card-animate p-8 rounded-3xl shadow-2xl w-full max-w-sm text-center transform transition-all duration-500 hover:scale-[1.02] border border-gray-700 bg-gray-800">
+            
+            <!-- Foto Profil -->
+            <!-- Tambahkan div pembungkus untuk border gradien -->
+            <div class="inline-block rounded-full profile-border-gradient mb-4">
+                <img
+                    src="https://placehold.co/128x128/f97316/ffffff?text=Alfa"
+                    alt="Foto Profil Alfa"
+                    class="rounded-full w-32 h-32 object-cover border-4 border-gray-800"
+                />
+            </div>
+
+            <!-- Nama dan Pendidikan -->
+            <h1 class="text-3xl font-extrabold text-gradient mb-1">
+                Alfa Rivales Matal
+            </h1>
+            <!-- Detail Fakultas dan Jurusan -->
+            <p class="text-sm font-medium text-gray-300">
+                Mahasiswa Teknik Informatika
+            </p>
+            <p class="text-sm font-medium text-gray-400 mb-4">
+                Fakultas Teknik, Universitas Palangkaraya
+            </p>
+
+            <!-- Bio baru -->
+            <p class="text-sm text-gray-400 mb-6">
+                Konten kreator digital, produser musik & DJ.
+            </p>
+
+            <!-- Tautan Media Sosial -->
+            <div class="flex flex-col space-y-4">
+                <!-- Tombol Instagram dengan gradien -->
+                <a
+                    href="https://www.instagram.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 button-gradient"
+                >
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </a>
+                <!-- Tombol YouTube dengan gradien terbalik untuk variasi -->
+                <a
+                    href="https://www.youtube.com/Alfa Rivales Matal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-red-600 to-red-800"
+                >
+                    <i class="fab fa-youtube mr-2"></i> YouTube
+                </a>
+                <!-- Tombol Facebook dengan warna biru khasnya -->
+                <a
+                    href="https://www.facebook.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-blue-600 hover:bg-blue-700"
+                >
+                    <i class="fab fa-facebook-f mr-2"></i> Facebook
+                </a>
+                <!-- Tombol WhatsApp dengan warna hijau khasnya -->
+                <a
+                    href="https://wa.me/6281234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-green-500 hover:bg-green-600"
+                >
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Alfa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Terapkan font Inter ke seluruh elemen body dan pastikan tidak ada margin/padding default */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0d0c1d; /* Warna latar belakang sangat gelap */
+        }
+        
+        /* Tambahkan gradien pada teks judul */
+        .text-gradient {
+            background-image: linear-gradient(90deg, #f97316, #3b82f6, #6b7280); /* Oranye, Biru, Abu-abu */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Gradien untuk border profil picture */
+        .profile-border-gradient {
+            background-image: linear-gradient(to bottom right, #f97316, #3b82f6);
+            padding: 4px; /* Lebar border */
+        }
+
+        /* Gradien untuk tombol */
+        .button-gradient {
+            background-image: linear-gradient(to right, #f97316, #3b82f6);
+        }
+
+        /* Animasi untuk card agar muncul dengan efek fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card-animate {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div id="app-root">
+        <div class="card-animate p-8 rounded-3xl shadow-2xl w-full max-w-sm text-center transform transition-all duration-500 hover:scale-[1.02] border border-gray-700 bg-gray-800">
+            
+            <!-- Foto Profil -->
+            <!-- Tambahkan div pembungkus untuk border gradien -->
+            <div class="inline-block rounded-full profile-border-gradient mb-4">
+                <img
+                    src="https://placehold.co/128x128/f97316/ffffff?text=Alfa"
+                    alt="Foto Profil Alfa"
+                    class="rounded-full w-32 h-32 object-cover border-4 border-gray-800"
+                />
+            </div>
+
+            <!-- Nama dan Pendidikan -->
+            <h1 class="text-3xl font-extrabold text-gradient mb-1">
+                Alfa Rivales Matal
+            </h1>
+            <!-- Detail Fakultas dan Jurusan -->
+            <p class="text-sm font-medium text-gray-300">
+                Mahasiswa Teknik Informatika
+            </p>
+            <p class="text-sm font-medium text-gray-400 mb-4">
+                Fakultas Teknik, Universitas Palangkaraya
+            </p>
+
+            <!-- Bio baru -->
+            <p class="text-sm text-gray-400 mb-6">
+                Konten kreator digital, produser musik & DJ.
+            </p>
+
+            <!-- Tautan Media Sosial -->
+            <div class="flex flex-col space-y-4">
+                <!-- Tombol Instagram dengan gradien -->
+                <a
+                    href="https://www.instagram.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 button-gradient"
+                >
+                    <i class="fab fa-instagram mr-2"></i> Instagram
+                </a>
+                <!-- Tombol YouTube dengan gradien terbalik untuk variasi -->
+                <a
+                    href="https://www.youtube.com/Alfa Rivales Matal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-gradient-to-r from-red-600 to-red-800"
+                >
+                    <i class="fab fa-youtube mr-2"></i> YouTube
+                </a>
+                <!-- Tombol Facebook dengan warna biru khasnya -->
+                <a
+                    href="https://www.facebook.com/alfarivalesmatal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-blue-600 hover:bg-blue-700"
+                >
+                    <i class="fab fa-facebook-f mr-2"></i> Facebook
+                </a>
+                <!-- Tombol WhatsApp dengan warna hijau khasnya -->
+                <a
+                    href="https://wa.me/6281234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center justify-center w-full p-3 rounded-xl text-white font-semibold shadow-md transition-all duration-300 transform hover:scale-105 bg-green-500 hover:bg-green-600"
+                >
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
