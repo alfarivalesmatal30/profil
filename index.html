@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JejakKu - Profil Sederhana</title>
+    <title>Profil Alfa Rivales Matal</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Inter dari Google Fonts -->
@@ -174,15 +174,22 @@
     <div id="welcome-popup" class="popup-overlay">
         <div class="popup-content">
             <h2 class="text-3xl font-extrabold text-white mb-2">Selamat Datang</h2>
-            <p class="text-md text-gray-400">Di halaman profil pribadi saya!</p>
+            <p class="text-md text-gray-400">Di halaman profil pribadi gw ngab!</p>
             <!-- Gambar di bawah teks, menggunakan file popup.jpg -->
-            <img src="popup.jpg" alt="Gambar Selamat Datang" class="popup-image">
+            <img src="popup.jpg" onerror="this.src='https://placehold.co/250x150/1E293B/38B2AC?text=Gambar+Pop-up'" alt="Gambar Selamat Datang" class="popup-image">
             <button id="view-profile-button" class="popup-button">Lihat Profil</button>
         </div>
     </div>
 
     <!-- Bagian Halaman Profil (Awalnya tersembunyi) -->
     <div id="profile-container" class="main-container hidden">
+        <!-- Tombol untuk menyalakan/mematikan musik -->
+        <div class="flex justify-end mb-4">
+            <button id="music-toggle-button" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-xl transition duration-300">
+                Matiin Musik Brisik
+            </button>
+        </div>
+
         <!-- Bagian Atas: Profil dan Bio -->
         <div class="text-center mb-10">
             <!-- Foto Profil -->
@@ -199,22 +206,22 @@
         <!-- Bagian Media Sosial -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
             <!-- Tombol Instagram -->
-            <a href="#" class="social-link">
+            <a href="https://www.instagram.com/alfarivalesmatal/" class="social-link">
                 <i class="fab fa-instagram fa-lg"></i>
                 <span class="font-semibold">Instagram</span>
             </a>
             <!-- Tombol YouTube -->
-            <a href="#" class="social-link">
+            <a href="https://www.youtube.com/@AlfaRivalesMatal/" class="social-link">
                 <i class="fab fa-youtube fa-lg"></i>
                 <span class="font-semibold">YouTube</span>
             </a>
             <!-- Tombol Facebook -->
-            <a href="#" class="social-link">
+            <a href="https://www.facebook.com/share/1CJ6wTWa3g/" class="social-link">
                 <i class="fab fa-facebook-f fa-lg"></i>
                 <span class="font-semibold">Facebook</span>
             </a>
             <!-- Tombol WhatsApp -->
-            <a href="#" class="social-link">
+            <a href="https://wa.me/6281350233445" class="social-link">
                 <i class="fab fa-whatsapp fa-lg"></i>
                 <span class="font-semibold">WhatsApp</span>
             </a>
@@ -265,7 +272,7 @@
         <div class="p-6 bg-[#2D3748] rounded-2xl shadow-inner">
             <h2 class="text-2xl font-bold text-white mb-4 border-b-2 border-gray-600 pb-2">Tentang Saya</h2>
             <p class="text-sm text-gray-300 leading-normal text-left">
-                Halo! Saya Alfa, seorang mahasiswa Teknik Informatika yang bersemangat dalam dunia pengembangan web dan desain. Saya senang belajar teknologi baru dan membuat solusi kreatif. Selain koding, saya juga tertarik pada desain grafis, fotografi, dan musik. Halaman ini adalah tempat saya berbagi jejak digital dan menghubungkan diri dengan orang-orang yang memiliki minat yang sama.
+                Halo! Gw Alfa, mahasiswa Teknik Informatika yang demen banget sama web dan desain. Gw suka banget coba teknologi baru dan bikin sesuatu yang kreatif. Selain ngulik koding, gw juga doyan desain grafis, fotografi, sama main musik. Tujuan gw simpel: terus berkembang, berkarya, dan ketemu orang-orang yang punya vibe serupa.
             </p>
         </div>
     </div>
@@ -276,6 +283,7 @@
             const profileContainer = document.getElementById('profile-container');
             const viewProfileButton = document.getElementById('view-profile-button');
             const audio = document.getElementById('background-music');
+            const musicToggleButton = document.getElementById('music-toggle-button');
             
             // Set sumber audio di sini untuk memastikan elemen sudah dimuat
             audio.src = 'lagu.mp3';
@@ -296,6 +304,21 @@
                 audio.play().catch(e => {
                     console.error("Autoplay gagal, mungkin perlu interaksi pengguna:", e);
                 });
+            });
+
+            // Tangani klik pada tombol "Matikan/Putar Musik"
+            musicToggleButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    // Jika musik berhenti, putar musik
+                    audio.play().catch(e => {
+                        console.error("Gagal memutar musik:", e);
+                    });
+                    musicToggleButton.textContent = "Matikan Musik";
+                } else {
+                    // Jika musik sedang diputar, hentikan
+                    audio.pause();
+                    musicToggleButton.textContent = "Putar Musik";
+                }
             });
         });
     </script>
