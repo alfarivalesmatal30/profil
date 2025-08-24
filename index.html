@@ -185,8 +185,8 @@
     <div id="profile-container" class="main-container hidden">
         <!-- Tombol untuk menyalakan/mematikan musik -->
         <div class="flex justify-end mb-4">
-            <button id="music-toggle-button" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-xl transition duration-300">
-                Matiin Musik Brisik
+            <button id="music-toggle-button" aria-label="Kontrol Musik">
+                <i id="music-icon" class="fas fa-volume-up fa-lg text-white"></i>
             </button>
         </div>
 
@@ -284,6 +284,7 @@
             const viewProfileButton = document.getElementById('view-profile-button');
             const audio = document.getElementById('background-music');
             const musicToggleButton = document.getElementById('music-toggle-button');
+            const musicIcon = document.getElementById('music-icon');
             
             // Set sumber audio di sini untuk memastikan elemen sudah dimuat
             audio.src = 'lagu.mp3';
@@ -306,18 +307,23 @@
                 });
             });
 
-            // Tangani klik pada tombol "Matikan/Putar Musik"
+            // BARIS BERIKUT INI TELAH DIUBAH UNTUK MENGGANTI LOGIKA PADA TOMBOL BARU
+            // Tangani klik pada tombol ikon musik
             musicToggleButton.addEventListener('click', () => {
                 if (audio.paused) {
                     // Jika musik berhenti, putar musik
                     audio.play().catch(e => {
                         console.error("Gagal memutar musik:", e);
                     });
-                    musicToggleButton.textContent = "Matikan Musik";
+                    // Ganti ikon menjadi ikon musik normal
+                    musicIcon.classList.remove('fa-volume-mute');
+                    musicIcon.classList.add('fa-volume-up');
                 } else {
                     // Jika musik sedang diputar, hentikan
                     audio.pause();
-                    musicToggleButton.textContent = "Putar Musik";
+                    // Ganti ikon menjadi ikon musik yang dicoret
+                    musicIcon.classList.remove('fa-volume-up');
+                    musicIcon.classList.add('fa-volume-mute');
                 }
             });
         });
